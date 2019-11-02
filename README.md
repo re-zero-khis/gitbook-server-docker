@@ -12,7 +12,7 @@
 > 注：
 <br/>　因为 gitbook 服务是运行在 Docker 中，所以不论使用哪个平台，都要预装好 Docker 环境
 <br/>　但是本文所使用的基础镜像是基于 Linux 的，因此 Docker in Windows 是无法直接安装的
-<br/>　所以针对 Windows 10 ，推荐使用 WSL (Windows Subsystem for Linux)
+<br/>　所以针对 Windows 10 ，推荐使用 WSL ( Windows Subsystem for Linux )
 <br/>　通过 WSL 安装 Ubuntu 系统，然后再在 Ubuntu 里面安装 Docker Deamon
 <br/>　最后 Docker in Windows 做端口映射，就可以实现 Windows 到 Linux 的无缝对接
 <br/>　具体的 Windows 环境部署方法略，可参考 《[简书： Win10 内置 Ubuntu 完美使用 Docker in Windows](https://www.jianshu.com/p/97d16b68045f)》
