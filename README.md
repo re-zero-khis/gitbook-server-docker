@@ -24,14 +24,14 @@
 
 ## 使用方法
 
-### 安装
+### 构建 GitBook 镜像
 
 首先安装 `git` 命令行工具，然后 `clone` 本仓库到本地：
 
 `git clone https://github.com/lyy289065406/gitbook-server-docker`
 
 
-在命令行环境下打开本地仓库目录。
+在命令行环境下 **打开本地仓库目录** 。
 
 
 Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406/gitbook-server-docker/blob/master/Dockerfile) 中，可以不修改直接使用。
@@ -50,7 +50,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook init`
 
-该命令会自动创建示例用的 GitBook 文件 。
+该命令会自动创建用于 **示例** 的 GitBook 文件 。
 
 实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
 
