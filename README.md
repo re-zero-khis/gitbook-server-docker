@@ -71,7 +71,7 @@
 
 >　该命令会自动创建用于 **示例** 的 GitBook 文件 。
 <br/>　实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
-<br/>　*更多的 GitBook 语法详见 《[GitBook 简明教程](http://www.chengweiyang.cn/gitbook/index.html)》*
+<br/>　*更多的 GitBook 语法详见 《[GitBook 学习笔记](https://yangjh.oschina.io/gitbook/)》*
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/02.png)
 
