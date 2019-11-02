@@ -97,7 +97,7 @@
 ## FAQ
 
 <details>
-<summary>展开查看图片</summary>
+<summary>展开查看详细</summary>
 <br/>
 
 ### 0x01 前文中 Docker 命令的参数是什么含义？
@@ -148,11 +148,7 @@
 `docker push exp/gitbook-server:latest`
 
 
-若提示 *denied: requested access to the resource is denied* 提交失败，
-
-是因为镜像 tag 名称 `/` 前面部分的空间名不是个人的用户名，
-
-先修改 tag 名称即可（例如我的用户名是 *expm02* ）：
+若提示 *denied: requested access to the resource is denied* 提交失败，是因为镜像 tag 名称 `/` 前面部分的空间名不是个人的用户名，先修改 tag 名称即可（例如我的用户名是 *expm02* ）：
 
 `docker tag fdc060ba7253 expm02/gitbook-server:latest`
 
