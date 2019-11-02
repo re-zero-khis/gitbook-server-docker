@@ -13,9 +13,9 @@
 <br/>　因为 gitbook 服务是运行在 Docker 中，所以不论使用哪个平台，都要预装好 Docker 环境
 <br/>　但是本文所使用的基础镜像是基于 Linux 的，因此 Docker in Windows 是无法直接安装的
 <br/>　所以针对 Windows 10 ，推荐使用 WSL ( Windows Subsystem for Linux )
-<br/>　通过 WSL 安装 Ubuntu 系统，然后再在 Ubuntu 里面安装 Docker Deamon
+<br/>　通过 WSL 安装 Ubuntu 系统，然后再[在 Ubuntu 里面安装 Docker Deamon](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 <br/>　最后 Docker in Windows 做端口映射，就可以实现 Windows 到 Linux 的无缝对接
-<br/>　具体的 Windows 环境部署方法略，可参考 《[简书： Win10 内置 Ubuntu 完美使用 Docker in Windows](https://www.jianshu.com/p/97d16b68045f)》
+<br/>　具体的 Windows Docker 环境部署方法可参考 《[简书： Win10 内置 Ubuntu 完美使用 Docker in Windows](https://www.jianshu.com/p/97d16b68045f)》
 <br/>　至于 Linux 和 Mac 则简单得多，直接安装 Docker Deamon 即可使用，具体方法自行谷歌
 
 
@@ -109,7 +109,7 @@
 - `-v "$PWD/gitbook:/gitbook"`：把本地工作目录 `$PWD/gitbook` 挂载到镜像的工作目录 `/gitbook` （这样运行 GitBook 期间的工作数据就会从本地映射到镜像内，即使镜像退出运行，数据依旧会保留在本地）
 - `-p 4000:4000`：把镜像内 GitBook 的 4000 服务端口暴露到本地物理机的 4000 端口
 - `exp/gitbook-server`：目标镜像名称
-- `<Command>`：要在镜像内执行的命令，如 `gitbook serve` 等
+- `<Command>`：要在镜像内执行的命令，如 `gitbook serve` 等，更多命令可见 [gitbook-cli](https://github.com/GitbookIO/gitbook-cli)
 
 
 
