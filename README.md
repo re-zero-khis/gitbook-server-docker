@@ -1,4 +1,4 @@
-# gitbook-server-docker
+# GitBook-Server-Docker
 
 > 使用 Docker 构建的 GitBook 服务器
 
@@ -9,6 +9,11 @@
 使用 [GitBook](http://app.gitbook.com/) 的初衷主要是为了可以利用 Github 为数据载体，在线上和线下同时搭建个人博客。
 
 但是在线下搭建 GitBook 服务器最大的问题是环境部署复杂，因此本文利用 Docker 实现一键部署服务器。
+
+> 在线上部署的方法则比较多：
+<br/>　利用 [GitBook](http://app.gitbook.com/) 官方提供的免费空间
+<br/>　利用 GitHub Pages （有 300M 免费空间）
+<br/>　租用个人云服务器，同样可以用 Docker 搭建
 
 ------
 ## 运行环境
