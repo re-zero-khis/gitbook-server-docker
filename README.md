@@ -19,7 +19,14 @@
 <br/>　至于 Linux 和 Mac 则简单得多，直接安装 Docker Deamon 即可使用，具体方法自行谷歌
 
 
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/00.png)
+
+</details>
+
 
 
 ## 使用方法
@@ -41,7 +48,14 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker build . -t exp/gitbook-server:latest`
 
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/01.png)
+
+</details>
+
 
 ------
 ### 初始化 GitBook 项目
@@ -54,7 +68,13 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
 
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/02.png)
+
+</details>
 
 
 ------
@@ -70,7 +90,14 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 通过 `./gitbook/_book/index.html` 可以测试访问 。
 
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/03.png)
+
+</details>
+
 
 ------
 ### 启动 GitBook 服务
