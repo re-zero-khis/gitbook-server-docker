@@ -28,7 +28,7 @@
 </details>
 
 
-
+------
 ## 使用方法
 
 ### 构建 GitBook 镜像
@@ -59,7 +59,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 至此镜像已经安装完毕，下文主要是测试 GitBook 镜像是否可用。
 
 
-------
+
 ### 初始化 GitBook 项目
 
 在 Docker 镜像中执行命令 `gitbook init`：
@@ -79,7 +79,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 </details>
 
 
-------
+
 ### 构建 GitBook 项目
 
 在 Docker 镜像中执行命令 `gitbook build`：
@@ -101,7 +101,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 </details>
 
 
-------
+
 ### 启动 GitBook 服务
 
 
@@ -120,7 +120,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 </details>
 
 
-
+------
 ## FAQ
 
 ### 0x01 前文中 Docker 命令的参数是什么含义？
@@ -135,11 +135,13 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 - `<Command>`：要在镜像内执行的命令，如 `gitbook serve` 等
 
 
+
 ### 0x02 怎样以后台运行方式启动 GitBook 服务？
 
 增加 `-d` 参数即可：
 
 `docker run -d --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook serve`
+
 
 
 ### 0x04 怎样停止 GitBook 服务？
@@ -154,6 +156,8 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 </details>
 
+
+
 ### 0x05 怎样进入这个 Docker 镜像？
 
 执行下面命令即可：
@@ -162,6 +166,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 - `-it`：表示以交互方式运行
 - `/bin/sh`：此镜像的基础镜像是 `node:8.5-alpine` ，shell 只支持 `/bin/sh`
+
 
 
 ### 0x06 怎样共享这个 Docker 镜像？
@@ -187,6 +192,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
 
 </details>
+
 
 
 ### 0x06 怎样获取共享的 Docker 镜像？
