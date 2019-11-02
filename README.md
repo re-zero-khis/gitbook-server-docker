@@ -6,9 +6,7 @@
 
 ## 简介
 
-使用 [GitBook](http://app.gitbook.com/) 的初衷主要是为了可以利用 Github 搭建个人博客。
-
-通过 GitBook 可以以 Github 为数据载体，在线上和线下同时搭建个人博客。
+使用 [GitBook](http://app.gitbook.com/) 的初衷主要是为了可以利用 Github 为数据载体，在线上和线下同时搭建个人博客。
 
 但是在线下搭建 GitBook 服务器最大的问题是环境部署复杂，因此本文利用 Docker 实现一键部署服务器。
 
