@@ -67,7 +67,7 @@
 
 在 Docker 镜像中执行命令 `gitbook init`：
 
-`docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook init`
+`docker run --rm -v "$PWD/gitbook:/gitbook" exp/gitbook-server gitbook init`
 
 >　该命令会自动创建用于 **示例** 的 GitBook 文件 。
 <br/>　实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
@@ -82,7 +82,7 @@
 
 在 Docker 镜像中执行命令 `gitbook build`：
 
-`docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook build`
+`docker run --rm -v "$PWD/gitbook:/gitbook" exp/gitbook-server gitbook build`
 
 >　该命令会根据 GitBook 文件 `README.md` 和 `SUMMARY.md` 构建 html 项目 。
 <br/>　实际效果就是在工作目录 `./gitbook` 下构建目录名为 `_book` 的静态网页文件 。
