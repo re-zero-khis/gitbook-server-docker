@@ -56,6 +56,8 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 </details>
 
+至此镜像已经安装完毕，下文主要是测试 GitBook 镜像是否可用。
+
 
 ------
 ### 初始化 GitBook 项目
@@ -88,7 +90,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 实际效果就是在工作目录 `./gitbook` 下构建目录名为 `_book` 的静态网页文件 。
 
-通过 `./gitbook/_book/index.html` 可以测试访问 。
+本地可以通过 `./gitbook/_book/index.html` 测试访问 。
 
 <details>
 <summary>展开查看图片</summary>
@@ -102,21 +104,94 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 ------
 ### 启动 GitBook 服务
 
+
+在 Docker 镜像中执行命令 `gitbook serve`：
+
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook serve`
 
+该命令效果就是构建一个可以访问 `./gitbook/_book/index.html` 的 Web 服务。
+
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/04.png)
+
+</details>
+
+
+
+## FAQ
+
+### 0x01 前文中 Docker 命令的参数是什么含义？
+
+`docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server <Command>`
+
+- `docker run`：运行镜像
+- `--rm`：退出镜像后自动删除运行时产生的数据（此镜像目的是提供 GitBook 服务的运行环境，因此没必要保留数据）
+- `-v "$PWD/gitbook:/gitbook"`：把本地工作目录 `$PWD/gitbook` 挂载到镜像的工作目录 `/gitbook` （这样运行 GitBook 期间的工作数据就会从本地映射到镜像内，即使镜像退出运行数据依旧会保留在本地）
+- `-p 4000:4000`：把镜像内 GitBook 的 4000 服务端口暴露到本地物理机的 4000 端口
+- `exp/gitbook-server`：目标镜像名称
+- `<Command>`：要在镜像内执行的命令，如 `gitbook serve` 等
+
+
+### 0x02 怎样以后台运行方式启动 GitBook 服务？
+
+增加 `-d` 参数即可：
+
+`docker run -d --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook serve`
+
+
+### 0x04 怎样停止 GitBook 服务？
+
+先用 `docker ps` 命令查看正在运行的 GitBook 容器，然后执行命令 `docker stop <CONTAINER ID>` 即可 。
+
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/05.png)
+
+</details>
+
+### 0x05 怎样进入这个 Docker 镜像？
+
+执行下面命令即可：
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -it exp/gitbook-server /bin/sh`
 
-同时把 `./gitbook` 目录挂载到镜像中的 `/gitbook` 目录、 并把 4000 端口暴露出来
+- `-it`：表示以交互方式运行
+- `/bin/sh`：此镜像的基础镜像是 `node:8.5-alpine` ，shell 只支持 `/bin/sh`
 
 
-`docker login`
+### 0x06 怎样共享这个 Docker 镜像？
+
+先执行 `docker login` 命令登陆，然后提交到个人的 Docker Hub 仓库：
 
 `docker push exp/gitbook-server:latest`
 
 
+若提示 *denied: requested access to the resource is denied* 提交失败，
+
+是因为镜像 tag 名称 `/` 前面部分的空间名不是个人的用户名，
+
+通过以下命令修改 tag 名称即可（例如我的用户名是 *expm02* ）：
+
 `docker tag fdc060ba7253 expm02/gitbook-server:latest`
 
+<details>
+<summary>展开查看图片</summary>
+<br/>
+
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/06.png)
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
+
+</details>
+
+
+### 0x06 怎样获取共享的 Docker 镜像？
+
+直接执行以下命令即可（这样就不用执行前文的安装步骤了）：
 
 `docker pull expm02/gitbook-server:latest`
 
