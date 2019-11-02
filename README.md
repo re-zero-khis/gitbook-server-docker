@@ -38,11 +38,7 @@
 `git clone https://github.com/lyy289065406/gitbook-server-docker`
 
 
-在命令行环境下 **打开本地仓库目录** 。
-
-
-Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406/gitbook-server-docker/blob/master/Dockerfile) 中，可以不修改直接使用。
-
+在命令行环境下 **打开本地仓库目录** 。 Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406/gitbook-server-docker/blob/master/Dockerfile) 中，可以不修改直接使用。
 
 构建 Docker 镜像（镜像名称 `exp/gitbook-server` 可根据 Docker 规范自定义修改）：
 
@@ -61,8 +57,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook init`
 
-> 
-<br/>　该命令会自动创建用于 **示例** 的 GitBook 文件 。
+>　该命令会自动创建用于 **示例** 的 GitBook 文件 。
 <br/>　实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/02.png)
@@ -76,8 +71,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook build`
 
-> 
-<br/>　该命令会根据 GitBook 文件 `README.md` 和 `SUMMARY.md` 构建 html 项目 。
+>　该命令会根据 GitBook 文件 `README.md` 和 `SUMMARY.md` 构建 html 项目 。
 <br/>　实际效果就是在工作目录 `./gitbook` 下构建目录名为 `_book` 的静态网页文件 。
 <br/>　本地可以通过 `./gitbook/_book/index.html` 测试访问 。
 
