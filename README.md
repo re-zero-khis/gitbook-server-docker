@@ -48,13 +48,8 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker build . -t exp/gitbook-server:latest`
 
-<details>
-<summary>展开查看图片</summary>
-<br/>
-
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/01.png)
 
-</details>
 
 至此镜像已经安装完毕，下文主要是测试 GitBook 镜像是否可用。
 
@@ -66,17 +61,12 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook init`
 
-该命令会自动创建用于 **示例** 的 GitBook 文件 。
-
-实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
-
-<details>
-<summary>展开查看图片</summary>
-<br/>
+> 
+<br/>　该命令会自动创建用于 **示例** 的 GitBook 文件 。
+<br/>　实际效果就是在工作目录 `./gitbook` 下创建两个符合 GitBook 语法的文件 `README.md` 和 `SUMMARY.md` 。
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/02.png)
 
-</details>
 
 
 
@@ -86,19 +76,13 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook build`
 
-该命令会根据 GitBook 文件 `README.md` 和 `SUMMARY.md` 构建 html 项目 。
-
-实际效果就是在工作目录 `./gitbook` 下构建目录名为 `_book` 的静态网页文件 。
-
-本地可以通过 `./gitbook/_book/index.html` 测试访问 。
-
-<details>
-<summary>展开查看图片</summary>
-<br/>
+> 
+<br/>　该命令会根据 GitBook 文件 `README.md` 和 `SUMMARY.md` 构建 html 项目 。
+<br/>　实际效果就是在工作目录 `./gitbook` 下构建目录名为 `_book` 的静态网页文件 。
+<br/>　本地可以通过 `./gitbook/_book/index.html` 测试访问 。
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/03.png)
 
-</details>
 
 
 
@@ -109,19 +93,18 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker run --rm -v "$PWD/gitbook:/gitbook" -p 4000:4000 exp/gitbook-server gitbook serve`
 
-该命令效果就是构建一个可以访问 `./gitbook/_book/index.html` 的 Web 服务。
-
-<details>
-<summary>展开查看图片</summary>
-<br/>
+> 该命令效果就是构建一个可以访问 `./gitbook/_book/index.html` 的 Web 服务。
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/04.png)
 
-</details>
 
 
 ------
 ## FAQ
+
+<details>
+<summary>展开查看图片</summary>
+<br/>
 
 ### 0x01 前文中 Docker 命令的参数是什么含义？
 
@@ -129,7 +112,7 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 - `docker run`：运行镜像
 - `--rm`：退出镜像后自动删除运行时产生的数据（此镜像目的是提供 GitBook 服务的运行环境，因此没必要保留数据）
-- `-v "$PWD/gitbook:/gitbook"`：把本地工作目录 `$PWD/gitbook` 挂载到镜像的工作目录 `/gitbook` （这样运行 GitBook 期间的工作数据就会从本地映射到镜像内，即使镜像退出运行数据依旧会保留在本地）
+- `-v "$PWD/gitbook:/gitbook"`：把本地工作目录 `$PWD/gitbook` 挂载到镜像的工作目录 `/gitbook` （这样运行 GitBook 期间的工作数据就会从本地映射到镜像内，即使镜像退出运行，数据依旧会保留在本地）
 - `-p 4000:4000`：把镜像内 GitBook 的 4000 服务端口暴露到本地物理机的 4000 端口
 - `exp/gitbook-server`：目标镜像名称
 - `<Command>`：要在镜像内执行的命令，如 `gitbook serve` 等
@@ -148,13 +131,8 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 先用 `docker ps` 命令查看正在运行的 GitBook 容器，然后执行命令 `docker stop <CONTAINER ID>` 即可 。
 
-<details>
-<summary>展开查看图片</summary>
-<br/>
-
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/05.png)
 
-</details>
 
 
 
@@ -180,18 +158,11 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 是因为镜像 tag 名称 `/` 前面部分的空间名不是个人的用户名，
 
-通过以下命令修改 tag 名称即可（例如我的用户名是 *expm02* ）：
+先修改 tag 名称即可（例如我的用户名是 *expm02* ）：
 
 `docker tag fdc060ba7253 expm02/gitbook-server:latest`
 
-<details>
-<summary>展开查看图片</summary>
-<br/>
-
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/06.png)
-![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
-
-</details>
 
 
 
@@ -201,5 +172,8 @@ Docker 脚本已经编排好在 [`./Dockerfile`](https://github.com/lyy289065406
 
 `docker pull expm02/gitbook-server:latest`
 
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
+
+</details>
 
 ------
