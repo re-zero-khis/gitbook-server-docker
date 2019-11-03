@@ -174,7 +174,7 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 - 提交变更内容后，点击 Github 仓库下的 branch 查看 master 分支
 - master 分支会提示最近提交内容的 Guthub Pages 构建情况
 - 若构建失败，可以点击 Details 查看详情
-假如提示 `is not a recognised Liquid tag` 说明就是采用了 Octopress 框架的插件
+- 假如提示 `is not a recognised Liquid tag` 说明就是采用了 Octopress 框架的插件
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/08.png)
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/09.png)
