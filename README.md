@@ -169,7 +169,7 @@
 
 
 
-### 0x06 怎样获取共享的 Docker 镜像？
+### 0x07 怎样获取共享的 Docker 镜像？
 
 直接执行以下命令即可（这样就不用执行前文的安装步骤了）：
 
@@ -179,7 +179,7 @@
 
 
 
-### 0x07 怎样安装 GitBook 插件？
+### 0x08 怎样安装 GitBook 插件？
 
 GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明可见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins) 。
 
@@ -188,9 +188,10 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 以 `prism` 插件为例，安装方式有两种：
 
 - 方法一：把插件名称 `prism` 添加到 `book.json` 的 `plugins` 列表，然后执行 `gitbook install` 命令
-- 方法二：执行 `npm install gitbook-plugin-prism` 命令安装指定插件，然后把插件名称 `prism` 配置到 `book.json` 的 `plugins` 列表
+- 方法二：执行 `npm install gitbook-plugin-prism` 命令安装指定插件，然后把插件名称 `prism` 配置到 `book.json` 的 `plugins` 列表使其生效
 
-方法一每次执行都会检查现有插件是否需要更新。 方法二只有特定插件受影响，适合于存在自定义修改过插件代码的情况。
+>　方法一每次执行都会检查现有插件是否需要更新。 
+<br/>　方法二只有特定插件受影响，适合于存在自定义修改过插件代码的情况。
 
 
 </details>
