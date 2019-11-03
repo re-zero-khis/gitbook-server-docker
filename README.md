@@ -109,9 +109,6 @@
 ------
 ## FAQ
 
-<details>
-<summary>展开查看详细</summary>
-<br/>
 
 ### 0x01 前文中 Docker 命令的参数是什么含义？
 
@@ -142,7 +139,6 @@
 
 
 
-
 ### 0x05 怎样进入这个 Docker 镜像？
 
 执行下面命令即可：
@@ -154,32 +150,7 @@
 
 
 
-### 0x06 怎样共享这个 Docker 镜像？
-
-先执行 `docker login` 命令登陆，然后提交到个人的 Docker Hub 仓库：
-
-`docker push exp/gitbook-server:latest`
-
-
-若提示 *denied: requested access to the resource is denied* 提交失败，是因为镜像 tag 名称 `/` 前面部分的空间名不是个人的用户名，先修改 tag 名称即可（例如我的用户名是 *expm02* ）：
-
-`docker tag fdc060ba7253 expm02/gitbook-server:latest`
-
-![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/06.png)
-
-
-
-### 0x07 怎样获取共享的 Docker 镜像？
-
-直接执行以下命令即可（这样就不用执行前文的安装步骤了）：
-
-`docker pull expm02/gitbook-server:latest`
-
-![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
-
-
-
-### 0x08 怎样安装 GitBook 插件？
+### 0x06 怎样安装 GitBook 插件？
 
 GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明可见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins) 。
 
@@ -194,6 +165,34 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 >　方法一每次执行都会检查现有插件是否需要更新。 
 <br/>　方法二只有特定插件受影响，适合于存在自定义修改过插件代码的情况。
+
+
+<details>
+<summary>展开查看更多</summary>
+<br/>
+
+### 0x07 怎样共享这个 Docker 镜像？
+
+先执行 `docker login` 命令登陆，然后提交到个人的 Docker Hub 仓库：
+
+`docker push exp/gitbook-server:latest`
+
+
+若提示 *denied: requested access to the resource is denied* 提交失败，是因为镜像 tag 名称 `/` 前面部分的空间名不是个人的用户名，先修改 tag 名称即可（例如我的用户名是 *expm02* ）：
+
+`docker tag fdc060ba7253 expm02/gitbook-server:latest`
+
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/06.png)
+
+
+
+### 0x08 怎样获取共享的 Docker 镜像？
+
+直接执行以下命令即可（这样就不用执行前文的安装步骤了）：
+
+`docker pull expm02/gitbook-server:latest`
+
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
 
 
 </details>
