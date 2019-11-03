@@ -185,7 +185,7 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html)。
 
-需注意根据约定，若 **插件名称** 为 `prism` ，则其对应 **安装包名称** 为 `gitbook-plugin-prism` 。
+需注意根据插件命名约定，若 **插件名称** 为 `prism` ，则其对应 **安装包名称** 为 `gitbook-plugin-prism` 。
 
 以 `prism` 插件为例，安装方式有两种：
 
