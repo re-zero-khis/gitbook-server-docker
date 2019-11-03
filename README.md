@@ -6,7 +6,7 @@
 
 ## 简介
 
-使用 [GitBook](http://app.gitbook.com/) 的初衷主要是为了可以利用 Github 为数据载体，在线上和线下同时搭建个人博客。
+使用 [GitBook](https://docs.gitbook.com/) 的初衷主要是为了可以利用 Github 为数据载体，在线上和线下同时搭建个人博客。
 
 但是在线下搭建 GitBook 服务器最大的问题是环境部署复杂，因此本文利用 Docker 实现一键部署服务器。
 
@@ -176,6 +176,22 @@
 `docker pull expm02/gitbook-server:latest`
 
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
+
+
+
+### 0x07 怎样安装 GitBook 插件？
+
+GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明可见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins) 。
+
+推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html)，需注意根据约定，若 **插件名称** 为 `prism` ，则其对应 **安装包名称** 为 `gitbook-plugin-prism` 。
+
+以 `prism` 插件为例，安装方式有两种：
+
+- 方法一：把插件名称 `prism` 添加到 `book.json` 的 `plugins` 列表，然后执行 `gitbook install` 命令
+- 方法二：执行 `npm install gitbook-plugin-prism` 命令安装指定插件，然后把插件名称 `prism` 配置到 `book.json` 的 `plugins` 列表
+
+方法一每次执行都会检查现有插件是否需要更新。 方法二只有特定插件受影响，适合于存在自定义修改过插件代码的情况。
+
 
 </details>
 
