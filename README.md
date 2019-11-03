@@ -154,7 +154,7 @@
 
 GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明可见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins) 。
 
-推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html) （注意 Guthub Pages 不支持使用了 octopress 框架的插件，详见 《[About GitHub Pages and Jekyll](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll)》）。
+推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html) 。
 
 根据插件命名约定，若 **插件名称** 为 `prism` ，则其对应 **安装包名称** 为 `gitbook-plugin-prism` 。
 
@@ -165,6 +165,20 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 >　方法一每次执行都会检查现有插件是否需要更新。 
 <br/>　方法二只有特定插件受影响，适合于存在自定义修改过插件代码的情况。
+
+
+注意， Guthub Pages 不支持使用了 Octopress 框架的插件，详见 《[About GitHub Pages and Jekyll](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll)》 。
+
+若使用了这类插件，Guthub Pages 是无法发布成功的。 判定是不是使用了这类插件的方法也很简单：
+
+- 提交变更内容后，点击 Github 仓库下的 branch 查看 master 分支
+- master 分支会提示最近提交内容的 Guthub Pages 构建情况
+- 若构建失败，可以点击 Details 查看详情
+假如提示 `is not a recognised Liquid tag` 说明就是采用了 Octopress 框架的插件
+
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/08.png)
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/09.png)
+![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/10.png)
 
 
 <details>
