@@ -183,7 +183,9 @@
 
 GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明可见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins) 。
 
-推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html)，需注意根据约定，若 **插件名称** 为 `prism` ，则其对应 **安装包名称** 为 `gitbook-plugin-prism` 。
+推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html)。
+
+需注意根据约定，若 **插件名称** 为 `prism` ，则其对应 **安装包名称** 为 `gitbook-plugin-prism` 。
 
 以 `prism` 插件为例，安装方式有两种：
 
