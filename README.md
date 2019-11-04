@@ -181,11 +181,18 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/10.png)
 
 
+
+### 0x06 怎样开发 GitBook 自定义插件？
+
+> 参考[这里](https://github.com/iuap-design/blog/issues/11)
+
+
+
 <details>
 <summary>展开查看更多</summary>
 <br/>
 
-### 0x07 怎样共享这个 Docker 镜像？
+### 0x08 怎样共享这个 Docker 镜像？
 
 先执行 `docker login` 命令登陆，然后提交到个人的 Docker Hub 仓库：
 
@@ -200,7 +207,7 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 
 
-### 0x08 怎样获取共享的 Docker 镜像？
+### 0x09 怎样获取共享的 Docker 镜像？
 
 直接执行以下命令即可（这样就不用执行前文的安装步骤了）：
 
