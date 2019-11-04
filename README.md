@@ -160,8 +160,8 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 以 `prism` 插件为例，安装方式有两种：
 
-- 方法一：把插件名称 `prism` 添加到 `book.json` 的 `plugins` 列表，然后执行 `gitbook install` 命令
-- 方法二：执行 `npm install gitbook-plugin-prism` 命令安装指定插件，然后把插件名称 `prism` 配置到 `book.json` 的 `plugins` 列表使其生效
+- 通过 GitBook 安装：把插件名称 `prism` 添加到 `book.json` 的 `plugins` 列表，执行 `gitbook install` 命令
+- 通过 nodejs 安装：执行 `npm install gitbook-plugin-prism` 命令安装指定插件，然后把插件名称 `prism` 配置到 `book.json` 的 `plugins` 列表使其生效
 
 >　方法一每次执行都会检查现有插件是否需要更新。 
 <br/>　方法二只有特定插件受影响，适合于存在自定义修改过插件代码的情况。
