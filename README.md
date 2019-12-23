@@ -152,7 +152,7 @@
 
 ### 0x06 怎样安装 GitBook 插件？
 
-GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins) 。
+GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins)。
 
 推荐 GitBook 安装的插件可参考 [这份清单](http://gitbook.zhangjikai.com/plugins.html) 。
 
