@@ -131,7 +131,7 @@
 
 
 
-### 0x04 怎样停止 GitBook 服务？
+### 0x03 怎样停止 GitBook 服务？
 
 先用 `docker ps` 命令查看正在运行的 GitBook 容器，然后执行命令 `docker stop <CONTAINER ID>` 即可 。
 
@@ -139,7 +139,7 @@
 
 
 
-### 0x05 怎样进入这个 Docker 镜像？
+### 0x04 怎样进入这个 Docker 镜像？
 
 执行下面命令即可：
 
@@ -150,7 +150,7 @@
 
 
 
-### 0x06 怎样安装 GitBook 插件？
+### 0x05 怎样安装 GitBook 插件？
 
 GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作目录下的 [`book.json`](https://github.com/lyy289065406/exp-blog/blob/master/gitbook/book.json) 配置并控制，相关说明见 [官方文档](https://docs.gitbook.com/v2-changes/important-differences#plugins)。
 
@@ -192,7 +192,7 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 <summary>展开查看更多</summary>
 <br/>
 
-### 0x08 怎样共享这个 Docker 镜像？
+### 0x07 怎样共享这个 Docker 镜像？
 
 先执行 `docker login` 命令登陆，然后提交到个人的 Docker Hub 仓库：
 
@@ -207,7 +207,7 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 
 
-### 0x09 怎样获取共享的 Docker 镜像？
+### 0x08 怎样获取共享的 Docker 镜像？
 
 直接执行以下命令即可（这样就不用执行前文的安装步骤了）：
 
