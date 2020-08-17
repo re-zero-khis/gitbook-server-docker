@@ -216,6 +216,23 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 ![](https://github.com/lyy289065406/gitbook-server-docker/blob/master/img/07.png)
 
 
+### 0x09 Github Page 构建超时？
+
+GitBook 构建的仓库有个问题，会随着内容增多、构建次数增加，变得越来越大。
+
+当仓库超过一定大小时， Github Page 会因为超时而构建失败。
+
+此时最有效的做法就是清洗仓库历史记录，按顺序执行以下命令即可：
+
+```
+rm -rf .git
+git init
+git add -A
+git commit -m "init"
+git remote add origin <GITHUB_REPO_URL>
+git push -f -u origin master
+```
+
 </details>
 
 ------
