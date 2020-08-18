@@ -228,7 +228,7 @@ GitBook 构建的仓库有个问题，会随着内容增多、构建次数增加
 rm -rf .git
 git init
 git add -A
-git commit -m "init"
+git commit -m "clear history"
 git remote add origin <GITHUB_REPO_URL>
 git push -f -u origin master
 ```
