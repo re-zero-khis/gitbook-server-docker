@@ -188,10 +188,6 @@ GitBook 的精粹在于丰富的插件以扩展其功能，插件可通过工作
 
 
 
-<details>
-<summary>展开查看更多</summary>
-<br/>
-
 ### 0x07 怎样共享这个 Docker 镜像？
 
 先执行 `docker login` 命令登陆，然后提交到个人的 Docker Hub 仓库：
@@ -232,8 +228,6 @@ git commit -m "clear history"
 git remote add origin <GITHUB_REPO_URL>
 git push -f -u origin master
 ```
-
-</details>
 
 ------
 
