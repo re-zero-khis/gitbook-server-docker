@@ -1,6 +1,6 @@
 # GitBook-Server-Docker
 
-> 使用 Docker 构建的 GitBook 服务器
+> docker 一键部署 GitBook 服务器
 
 ------
 
